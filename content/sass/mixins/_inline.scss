@@ -1,0 +1,9 @@
+@mixin inline( $align: top ) {
+    display: inline-block;
+    vertical-align: $align;
+
+    .lt-ie8 & {
+        display: inline;
+        zoom: 1;
+    }
+}

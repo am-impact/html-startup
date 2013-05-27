@@ -1,0 +1,9 @@
+.tweet {
+	margin: 1em 0;
+	@include font-size;
+
+	time {
+		display: block;
+		text-align: right;
+	}
+}

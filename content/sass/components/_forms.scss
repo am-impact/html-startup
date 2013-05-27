@@ -1,0 +1,178 @@
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+legend {
+    @extend .visuallyhidden;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+select,
+textarea{
+    width: 100%;
+    border: 1px solid #CCC;
+    font-family: $font-family;
+    @include font-size;
+    resize: none;
+
+    /* Voorkom dat d.m.v. selecteren de inhoud over de verticale as kan schuiven */
+    min-height: 28px;
+    line-height: 20px;
+    padding: 0 5px;
+
+    .no-touch &:hover {
+        border: 1px solid #666;
+    }
+
+    &:focus {
+        border: 1px solid #000;
+        outline: none;
+    }
+}
+
+select { padding: 5px; line-height: 10px; }
+
+textarea {
+    overflow: auto;
+}
+
+// Placeholder
+.defaultvalue { text-overflow: ellipsis; color: #999; }
+input[placeholder] { text-overflow: ellipsis; }
+::-moz-placeholder { text-overflow: ellipsis; color: #999; }
+::-webkit-input-placeholder { text-overflow: ellipsis; color: #999; }
+input:-moz-placeholder { text-overflow: ellipsis; color: #999; }
+
+
+input[type=radio],
+input[type=checkbox] {
+    padding: 0;
+    border: none;
+}
+
+// // Firefox fix
+// input::-moz-focus-inner {
+//     border: 0;
+//     padding: 0;
+//     margin-top: -2px;
+//     margin-bottom: -2px;
+// }
+
+input[type=text].validation_error,
+input[type=email].validation_error,
+input[type=number].validation_error,
+input[type=password].validation_error,
+select.validation_error,
+textarea.validation_error {
+    border: 1px solid #C00;
+}
+
+label.validation_field_message {
+    display: block;
+    padding: 0 0 0 5px;
+    color: #C00;
+}
+
+.buttons {
+    margin-top: 1em;
+}
+
+//
+// Buttons
+//
+button,
+.button,
+input[type=submit],
+input[type=reset],
+input[type=button] {
+    @include inline;
+    position: relative;
+    width: auto;
+    padding: 9px 16px;
+    margin: 0;
+    border: 1px solid darken($subcolor,20%);
+    border-radius: 3px;
+    font-family: inherit;
+    font-weight: bold;
+    line-height: 1;
+    font-family: $font-family;
+    @include font-size($font-size,$font-size);
+    text-align: center;
+    text-decoration: none;
+    color: #FFF !important;
+    background-color: $subcolor;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+    cursor: pointer;
+    @include transition( background-color 0.2s ease-in-out );
+
+    .lt-ie8 & {
+        width: auto;
+        overflow: visible;
+    }
+
+    .no-touch &:hover {
+        color: #FFF;
+        background-color: darken($subcolor,10%);
+    }
+
+    // Secondary button
+    &.secondary {
+        border-color: darken(#CCC,20%);
+        color: #333 !important;
+        background-color: #CCC;
+
+        .no-touch &:hover {
+            background-color: darken(#CCC,10%);
+        }
+    }
+
+    // Large
+    &.large {
+        padding: 16px 22px;
+        border-radius: 6px;
+        @include font-size($font-size+2,$font-size+2);
+    }
+}
+
+form {
+    @include font-size;
+
+    li { margin-top: 8px !important; margin-bottom: 8px !important; }
+    &.form-nb li { margin: 0; }
+
+    .required {
+        &:after {
+            content: '\002A';
+            padding: 0 0 0 5px;
+            font-weight: bold;
+            color: #C00;
+        }
+    }
+
+    .field {
+        label {
+            display: block;
+            margin: 5px 0;
+
+            input { margin: 0 5px 0 0; }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+// Responsive min
+@mixin respond-min( $width ) {
+	// Als het fixed width is
+    @if $fix-mqs {
+        // en als deze meer is dan de breedte (moeten we het toepassen)
+        @if $fix-mqs >= $width {
+            @content;
+        }
+    }
+    @else {
+        // Anders gewoon een media query
+        @media screen and (min-width: $width) {
+            @content;
+        }
+    }
+}
+
+// Responsive max
+@mixin respond-max( $width ) {
+    // Als het fixed width is
+    @if $fix-mqs {
+        // en als deze minder is dan de breedte (moeten we het toepassen)
+        @if $fix-mqs < $width {
+            @content;
+        }
+    }
+    @else {
+        // Anders gewoon een media query
+        @media screen and (max-width: $width) {
+            @content;
+        }
+    }
+}
+
+@mixin respond-screen() {
+    // Als het fixed width is
+    @if $old-ie {
+        // en als deze minder is dan de breedte (moeten we het toepassen)
+        @content;
+    }
+    @else {
+        // Anders gewoon een media query
+        @media only screen {
+            @content;
+        }
+    }
+}

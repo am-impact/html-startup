@@ -1,0 +1,35 @@
+h1 { @include font-size(24px); }
+h2 { @include font-size(24px); }
+h3 { @include font-size(22px); }
+h4 { @include font-size(20px); }
+h5 { @include font-size(18px); }
+h6 { @include font-size(16px); }
+
+.title {
+	margin: 0 0 1em 0;
+
+	h1, h2, h3, h4, h5, h6 {
+		margin: 0;
+		font-weight: 200;
+		font-family: $titlefont;
+		@include hyphens(auto);
+
+		.no-csshyphens & {
+			word-wrap: break-word;
+		}
+
+		a {
+			text-decoration: none;
+			color: $textcolor;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	span {
+		margin: 12px 0 0 0;
+		@include font-size;
+	}
+}

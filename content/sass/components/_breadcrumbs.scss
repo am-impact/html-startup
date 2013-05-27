@@ -1,0 +1,41 @@
+.breadcrumbs {
+	@extend .columns;
+	margin: 0 0 1em 0;
+  	@include font-size;
+  	color: #888;
+
+	span {
+		@include inline;
+	}
+
+	ol {
+		@include inline;
+	}
+
+	li {
+		@include inline;
+		&:after {
+			content: '\003E';
+			padding: 0 4px 0 6px;
+			color: $maincolor;
+		}
+
+		&.last {
+			font-weight: bold;
+
+			&:after {
+				display: none;
+			}
+		}
+	}
+
+	a {
+		text-decoration: none;
+		color: #888;
+
+		&:hover {
+			text-decoration: underline;
+			color: $subcolor;
+		}
+	}
+}

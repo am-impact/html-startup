@@ -1,0 +1,15 @@
+#googlemaps {
+    height: 450px;
+    font-family: $font-family;
+    @include font-size;
+    text-align: left;
+    color: $textcolor;
+
+    a { color: $textcolor; }
+    div[title="Street View afsluiten"] img { cursor: pointer; }
+    input[type="text"] { width: 210px; }
+
+    img {
+    	max-width: inherit;
+    }
+}

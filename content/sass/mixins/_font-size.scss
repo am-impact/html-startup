@@ -1,0 +1,9 @@
+@mixin font-size($sizeValue: $font-size, $line: $sizeValue * 1.5) {
+    font-size: $sizeValue;
+    line-height: $line;
+    //font-size: ($sizeValue / 10) + rem;
+    //line-height: ($line / 10) + rem;
+
+    font-size: remCalc($sizeValue);
+    line-height: remCalc($line);
+}
