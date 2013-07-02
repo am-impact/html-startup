@@ -1,6 +1,6 @@
 a {
-    color: $subcolor;
-    &:hover { color: darken($subcolor, 20%); }
+    color: $maincolor;
+    &:hover { color: $subcolor; }
 
     &.tel {
         text-decoration: none !important;

@@ -28,6 +28,7 @@ head.ready('shadowbox', function() {
 
 // Cookiemelding
 head.ready('cookie', function() {
+	/* <?php //TODO: Deze url moet nog aangepast worden voor livegang ?> */
 	var cm = new cookieMessage();
       	cm.defaults.mentionUrl = submap + 'pagina.html';
       	cm.mentionCookies();

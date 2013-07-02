@@ -95,62 +95,6 @@ label.validation_field_message {
     margin-top: 1em;
 }
 
-//
-// Buttons
-//
-button,
-.button,
-input[type=submit],
-input[type=reset],
-input[type=button] {
-    @include inline;
-    position: relative;
-    width: auto;
-    padding: 9px 16px;
-    margin: 0;
-    border: 1px solid darken($subcolor,20%);
-    border-radius: 3px;
-    font-family: inherit;
-    font-weight: bold;
-    line-height: 1;
-    font-family: $font-family;
-    @include font-size($font-size,$font-size);
-    text-align: center;
-    text-decoration: none;
-    color: #FFF !important;
-    background-color: $subcolor;
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
-    cursor: pointer;
-    @include transition( background-color 0.2s ease-in-out );
-
-    .lt-ie8 & {
-        width: auto;
-        overflow: visible;
-    }
-
-    .no-touch &:hover {
-        color: #FFF;
-        background-color: darken($subcolor,10%);
-    }
-
-    // Secondary button
-    &.secondary {
-        border-color: darken(#CCC,20%);
-        color: #333 !important;
-        background-color: #CCC;
-
-        .no-touch &:hover {
-            background-color: darken(#CCC,10%);
-        }
-    }
-
-    // Large
-    &.large {
-        padding: 16px 22px;
-        border-radius: 6px;
-        @include font-size($font-size+2,$font-size+2);
-    }
-}
 
 form {
     @include font-size;
