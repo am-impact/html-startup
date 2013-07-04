@@ -103,7 +103,7 @@ blockquote {
     &:before {
         display: block;
         height: 0;
-        content: "“";
+        content: '\201C';
         margin-left: -.75em;
         font: italic 400%/1 Cochin,Georgia,"Times New Roman", serif;
         color: #999;
