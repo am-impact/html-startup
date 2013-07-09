@@ -1,5 +1,7 @@
 * {
     @include box-sizing(border-box);
+    word-wrap: break-word;
+    @include hyphens(auto);
 }
 
 html,
