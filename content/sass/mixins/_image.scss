@@ -1,9 +1,0 @@
-@mixin image( $width: 100% ) {
-	@if $fix-mqs {
-    }
-    @else {
-        width: 100%;
-        max-width: $width;
-        height: auto !important;
-    }
-}
