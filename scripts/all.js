@@ -9,6 +9,17 @@ if(!Modernizr.input.placeholder) {
 	});
 }
 
+/**
+ *  Tel linkjes op desktop niet klikbaar
+ */
+(function() {
+    if( !Modernizr.touch ) {
+        $('a[href^="tel:"]').on('click', function(e) {
+            e.preventDefault();
+        });
+    }
+})();
+
 
 // Functions
 head.ready('functions', function() {
