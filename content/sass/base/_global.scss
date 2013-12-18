@@ -172,12 +172,16 @@ blockquote {
 
 
 // C-entry
-@include respond-max( $pagewidth )
-{
-    .c-entry table {
-        display: block;
-        max-width: 100%;
-        width: auto !important;
+.c-entry {
+    a:visited { color: #666; }
+
+    @include respond-max( $pagewidth )
+    {
+        table {
+            display: block;
+            max-width: 100%;
+            width: auto !important;
+        }
     }
 }
 
