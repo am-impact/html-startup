@@ -1,18 +1,4 @@
 //
-// Font size
-//
-@mixin font-size( $sizeValue: $body-font-size, $line: false ) {
-    font-size: $sizeValue;
-    font-size: remCalc($sizeValue);
-
-	@if $line {
-		line-height: $line;
-    	line-height: remCalc($line);
-	}
-}
-
-
-//
 // Display inline
 //
 @mixin inline( $align: top ) {

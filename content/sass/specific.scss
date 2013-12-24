@@ -1,10 +1,12 @@
+@import "generic/functions";
 @import "settings";
 @import "generic/mixins";
 
 /* Styles */
 .c-entry {
 	font-family: $body-font-family;
-	@include font-size;
+	font-size: $body-font-size;
+    line-height: $body-font-size * 1.5;
 	color: $body-font-color;
 
 	p {
@@ -41,7 +43,7 @@
 	/* sub / sup */
 	sub,
 	sup {
-	    @include font-size( $body-font-size - 2px );
+	    font-size: $body-font-size - rem-calc(2px);
 	}
 
 	/* tables */
@@ -84,19 +86,19 @@
 .cms_textbigger   {
     /* name: Tekst groter*/
     font-family: $body-font-family;
-	@include font-size( $body-font-size + 2px );
+	font-size: $body-font-size + rem-calc(2px);
 }
 
 .cms_textnormal   {
     /* name: Tekst normaal*/
     font-family: $body-font-family;
-	@include font-size;
+	font-size: $body-font-size;
 }
 
 .cms_textsmaller   {
     /* name: Tekst kleiner*/
     font-family: $body-font-family;
-	@include font-size( $body-font-size - 2px );
+	font-size: $body-font-size - rem-calc(2px);
 }
 
 /*

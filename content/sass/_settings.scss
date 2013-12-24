@@ -1,10 +1,12 @@
+$rem-base: 16px;
+
 //
 // Base stuff
 //
 $body-bg: #fff;
 $body-font-color: #222;
 $body-font-family: Arial, sans-serif;
-$body-font-size: 14px;
+$body-font-size: rem-calc(14px);
 
 
 //
@@ -50,7 +52,6 @@ $fix-mqs: false !default;
 //
 // Foundation variables
 //
-$rem-base: 16px;
 $include-html-classes: true;
 $opposite-direction: right;
 $default-float: left;
