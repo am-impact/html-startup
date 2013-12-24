@@ -1,11 +1,11 @@
-﻿@import "base/settings";
-@import "mixins/font-size";
+@import "settings";
+@import "generic/mixins";
 
 /* Styles */
 .c-entry {
-	font-family: $font-family;
+	font-family: $body-font-family;
 	@include font-size;
-	color: $textcolor;
+	color: $body-font-color;
 
 	p {
 	    margin: 1em 0;
@@ -41,13 +41,13 @@
 	/* sub / sup */
 	sub,
 	sup {
-	    @include font-size( $font-size - 2px );
+	    @include font-size( $body-font-size - 2px );
 	}
 
 	/* tables */
 	table {
 	    empty-cells: show;
-	    border-color: $textcolor;
+	    border-color: $body-font-color;
 	    border-collapse: collapse;
 	    border-spacing: 0;
 	}
@@ -62,17 +62,17 @@
 	 */
 	h2 {
 		/* name: Kop 1*/
-		font-family: $titlefont;
+		font-family: $primary-font;
 	}
 
 	h3 {
 		/* name: Kop 2*/
-		font-family: $titlefont;
+		font-family: $primary-font;
 	}
 
 	h4 {
 		/* name: Kop 3*/
-		font-family: $titlefont;
+		font-family: $primary-font;
 	}
 }
 
@@ -83,20 +83,20 @@
  */
 .cms_textbigger   {
     /* name: Tekst groter*/
-    font-family: $font-family;
-	@include font-size( $font-size + 2px );
+    font-family: $body-font-family;
+	@include font-size( $body-font-size + 2px );
 }
 
 .cms_textnormal   {
     /* name: Tekst normaal*/
-    font-family: $font-family;
+    font-family: $body-font-family;
 	@include font-size;
 }
 
 .cms_textsmaller   {
     /* name: Tekst kleiner*/
-    font-family: $font-family;
-	@include font-size( $font-size - 2px );
+    font-family: $body-font-family;
+	@include font-size( $body-font-size - 2px );
 }
 
 /*
@@ -104,13 +104,13 @@
  */
 .cms_defaulttextcolor   {
     /* name: Tekst kleur standaard */
-    color: $textcolor;
-	font-family: $font-family;
+    color: $body-font-color;
+	font-family: $body-font-family;
 }
 
 /* eigen implementatie: Let op beschrijving*/
 .cms_hoofdkleur   {
     /* name: Tekst hoofdkleur*/
-    color: $maincolor;
-	font-family: $font-family;
+    color: $primary-color;
+	font-family: $body-font-family;
 }

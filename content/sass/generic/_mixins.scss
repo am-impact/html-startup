@@ -1,0 +1,45 @@
+//
+// Font size
+//
+@mixin font-size( $sizeValue: $body-font-size, $line: false ) {
+    font-size: $sizeValue;
+    font-size: remCalc($sizeValue);
+
+	@if $line {
+		line-height: $line;
+    	line-height: remCalc($line);
+	}
+}
+
+
+//
+// Display inline
+//
+@mixin inline( $align: top ) {
+    display: inline-block;
+    vertical-align: $align;
+
+    .lt-ie8 & {
+        display: inline;
+        zoom: 1;
+    }
+}
+
+
+//
+// Foundation mixins
+//
+$modules: () !default;
+@mixin exports($name) {
+    @if (index($modules, $name) == false) {
+        $modules: append($modules, $name);
+        @content;
+    }
+}
+
+// We use this to do clear floats
+@mixin clearfix {
+  *zoom:1;
+  &:before, &:after { content: " "; display: table; }
+  &:after { clear: both; }
+}

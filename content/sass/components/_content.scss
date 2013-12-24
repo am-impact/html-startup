@@ -1,0 +1,12 @@
+.c-entry {
+    a:visited { color: #666; }
+
+    @media #{$small-only}
+    {
+        table {
+            display: block;
+            max-width: 100%;
+            width: auto !important;
+        }
+    }
+}

@@ -1,0 +1,104 @@
+/* Styles */
+.c-entry {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-size: remCalc(14px);
+  color: #222222;
+  /* sub / sup */
+  /* tables */
+  /*
+   * Editor style list
+   */
+}
+.c-entry p {
+  margin: 1em 0;
+  padding: 0;
+}
+.c-entry img {
+  border: none;
+}
+.c-entry blockquote {
+  margin: 1em 0 1em 1em;
+  font-family: Georgia, serif;
+  color: #888;
+}
+.c-entry ul {
+  padding: 0 0 0 1em;
+  margin: 1em 0 1em 1em;
+  list-style: square;
+}
+.c-entry ol {
+  padding: 0 0 0 1em;
+  margin: 1em 0 1em 1em;
+  list-style: decimal;
+}
+.c-entry li {
+  clear: both;
+}
+.c-entry sub,
+.c-entry sup {
+  font-size: 12px;
+  font-size: remCalc(12px);
+}
+.c-entry table {
+  empty-cells: show;
+  border-color: #222222;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.c-entry th,
+.c-entry td {
+  padding: 0 0 0 2px;
+}
+.c-entry h2 {
+  /* name: Kop 1*/
+  font-family: Georgia, serif;
+}
+.c-entry h3 {
+  /* name: Kop 2*/
+  font-family: Georgia, serif;
+}
+.c-entry h4 {
+  /* name: Kop 3*/
+  font-family: Georgia, serif;
+}
+
+/*
+ * text sizes
+ */
+.cms_textbigger {
+  /* name: Tekst groter*/
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-size: remCalc(16px);
+}
+
+.cms_textnormal {
+  /* name: Tekst normaal*/
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-size: remCalc(14px);
+}
+
+.cms_textsmaller {
+  /* name: Tekst kleiner*/
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-size: remCalc(12px);
+}
+
+/*
+ * text colors
+ */
+.cms_defaulttextcolor {
+  /* name: Tekst kleur standaard */
+  color: #222222;
+  font-family: Arial, sans-serif;
+}
+
+/* eigen implementatie: Let op beschrijving*/
+.cms_hoofdkleur {
+  /* name: Tekst hoofdkleur*/
+  color: #008cba;
+  font-family: Arial, sans-serif;
+}

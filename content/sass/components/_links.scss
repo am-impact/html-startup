@@ -1,6 +1,6 @@
 a {
-    color: $maincolor;
-    &:hover { color: $subcolor; }
+    color: $primary-color;
+    &:hover { color: $secondary-color; }
 }
 
 
@@ -14,39 +14,5 @@ a[href^="tel:"] {
 
     &:hover {
         text-decoration: none !important;
-    }
-}
-
-
-//
-// More / back
-//
-%moreback {
-    @include inline;
-    font-style: italic;
-    text-decoration: none;
-    text-transform: lowercase;
-    @include font-size;
-    @include transition(all 0.3s ease);
-
-    &:after,
-    &:before {
-        font-style: normal;
-    }
-}
-
-.more {
-    @extend %moreback;
-    &:after {
-        content: '\203A';
-        margin: 0 0 0 6px;
-    }
-}
-
-.back {
-    @extend %moreback;
-    &:before {
-        content: '\2039';
-        margin: 0 6px 0 0;
     }
 }
