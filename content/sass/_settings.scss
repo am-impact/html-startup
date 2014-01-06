@@ -25,16 +25,16 @@ $primary-font: Georgia, serif;
 //
 // Font sizes
 //
-$giga-size: 96px !default;
-$mega-size: 72px !default;
-$kilo-size: 48px !default;
+$giga-size: rem-calc(96px) !default;
+$mega-size: rem-calc(72px) !default;
+$kilo-size: rem-calc(48px) !default;
 
-$h1-size: 36px !default; // .alpha
-$h2-size: 30px !default; // .beta
-$h3-size: 24px !default; // .gamma
-$h4-size: 20px !default; // .delta
-$h5-size: 16px !default; // .epsilon
-$h6-size: 14px !default; // .zeta
+$h1-size: rem-calc(36px) !default; // .alpha
+$h2-size: rem-calc(30px) !default; // .beta
+$h3-size: rem-calc(24px) !default; // .gamma
+$h4-size: rem-calc(20px) !default; // .delta
+$h5-size: rem-calc(16px) !default; // .epsilon
+$h6-size: rem-calc(14px) !default; // .zeta
 
 
 //
