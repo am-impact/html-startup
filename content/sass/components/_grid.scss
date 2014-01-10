@@ -194,6 +194,10 @@
     .column,
     .columns { @include grid-column($columns:$total-columns); }
 
+    @media #{$xsmall-up} {
+      @include grid-html-classes($size:xsmall);
+    }
+
     @media #{$small-up} {
       @include grid-html-classes($size:small);
     }

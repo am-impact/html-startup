@@ -53,6 +53,10 @@
 
         [class*="block-grid-"] { @include block-grid; }
 
+        @media #{$xsmall-up} {
+            @include block-grid-html-classes($size:xsmall);
+        }
+
         @media #{$small-up} {
             @include block-grid-html-classes($size:small);
         }
