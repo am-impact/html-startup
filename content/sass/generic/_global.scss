@@ -50,6 +50,16 @@ hr {
 
 
 //
+// Default reset lists
+//
+ol, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+//
 // Remove the gap between images, videos, audio and canvas and the bottom of
 // their containers: h5bp.com/i/440
 //
