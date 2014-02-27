@@ -1,5 +1,13 @@
 $rem-base: 16px;
 
+
+//
+// Sprites
+//
+$icons: 	sprite-map("icons/*.png", $layout: smart);
+$icons2x: 	sprite-map("icons2x/*.png", $layout: smart);
+
+
 //
 // Base stuff
 //
