@@ -55,11 +55,15 @@
 //
 $modules: () !default;
 @mixin exports($name) {
-    @if (index($modules, $name) == false) {
-        $modules: append($modules, $name);
+    @if ( index($modules, $name) ) {
+
+    }
+    @else {
+        $modules: append($modules, $name) !global;
         @content;
     }
 }
+
 
 // We use this to do clear floats
 @mixin clearfix {
