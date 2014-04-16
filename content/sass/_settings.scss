@@ -9,48 +9,62 @@ $icons2x: 	sprite-map("icons2x/*.png", $layout: smart);
 
 
 //
-// Base stuff
+// Fonts
 //
-$body-bg: #fff;
-$body-font-color: #222;
-$body-font-family: Arial, sans-serif;
-$body-font-size: rem-calc(14px);
+$base-font: Arial, sans-serif;
 
 
 //
 // Colors
 //
-$primary-color: #008CBA;
-$secondary-color: #e7e7e7;
+$blauw: #2f619f;
+$rood: #c61b16;
 
-$base-ui-color: #EEE;
-
-
-//
-// Fonts
-//
-$primary-font: Georgia, serif;
-
-
-//
-// Font sizes
-//
-$giga-size: rem-calc(96px) !default;
-$mega-size: rem-calc(72px) !default;
-$kilo-size: rem-calc(48px) !default;
-
-$h1-size: rem-calc(36px) !default; // .alpha
-$h2-size: rem-calc(30px) !default; // .beta
-$h3-size: rem-calc(24px) !default; // .gamma
-$h4-size: rem-calc(20px) !default; // .delta
-$h5-size: rem-calc(16px) !default; // .epsilon
-$h6-size: rem-calc(14px) !default; // .zeta
+$colors: (
+    base: (
+        primary: $blauw,
+        secondary: $rood,
+        text: #333,
+        ui: #ececec
+    ),
+    background: (
+		html: #FFF
+    )
+);
 
 
 //
-// Overig
+// Sizes
 //
-$global-radius: 3px;
+$sizes: (
+    font: (
+        body: rem-calc(14px),
+        h1: rem-calc(36px),
+        h2: rem-calc(30px),
+        h3: rem-calc(24px),
+        h4: rem-calc(20px),
+        h5: rem-calc(16px),
+        h6: rem-calc(14px),
+        giga: rem-calc(96px),
+        mega: rem-calc(72px),
+        kilo: rem-calc(48px)
+    ),
+    radius: (
+        global: 5px
+    ),
+    height: (
+
+    ),
+    width: (
+
+    ),
+    margin: (
+
+    ),
+    padding: (
+
+    )
+);
 
 
 //

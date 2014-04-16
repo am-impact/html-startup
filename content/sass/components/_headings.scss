@@ -1,20 +1,20 @@
 h1,.alpha{
-    font-size: $h1-size;
+    font-size: size(h1);
 }
 h2,.beta{
-    font-size: $h2-size;
+    font-size: size(h2);
 }
 h3,.gamma{
-    font-size: $h3-size;
+    font-size: size(h3);
 }
 h4,.delta{
-    font-size: $h4-size;
+    font-size: size(h4);
 }
 h5,.epsilon{
-    font-size: $h5-size;
+    font-size: size(h5);
 }
 h6,.zeta{
-    font-size: $h6-size;
+    font-size: size(h6);
 }
 
 
@@ -22,11 +22,11 @@ h6,.zeta{
 // Extra classes for bigger sizes
 //
 .giga{
-    font-size: $giga-size;
+    font-size: size(giga);
 }
 .mega{
-    font-size: $mega-size;
+    font-size: size(mega);
 }
 .kilo{
-    font-size: $kilo-size;
+    font-size: size(kilo);
 }

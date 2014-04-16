@@ -7,30 +7,30 @@ body { font-size: $rem-base; }
 
 html {
     overflow-y: scroll;
-    background: #FFF;
+    background: color(html,background);
 }
 
 body {
     -moz-font-smoothing: antialiased;
     -webkit-font-smoothing: antialiased;
     font-smoothing: antialiased;
-    font-family: $body-font-family;
-    font-size: $body-font-size;
-    line-height: $body-font-size * 1.5;
-    color: $body-font-color;
+    font-family: $base-font;
+    font-size: size(body);
+    line-height: size(body) * 1.5;
+    color: color(text);
 }
 
 //
 // Selection
 //
 ::-moz-selection {
-    background: $primary-color;
+    background: color(primary);
     color: #FFF;
     text-shadow: none;
 }
 
 ::selection {
-    background: $primary-color;
+    background: color(primary);
     color: #FFF;
     text-shadow: none;
 }
@@ -43,7 +43,7 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid color(ui);
     margin: 1em 0;
     padding: 0;
 }
@@ -91,7 +91,7 @@ img[height] {
 //
 .browsehappy {
     margin: 0.2em 0;
-    background: #ccc;
+    background: color(ui);
     color: #000;
     padding: 0.2em 0;
 }
