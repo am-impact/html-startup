@@ -4,10 +4,10 @@
 
 /* Styles */
 .c-entry {
-	font-family: $body-font-family;
-	font-size: $body-font-size;
-    line-height: $body-font-size * 1.5;
-	color: $body-font-color;
+	font-family: $base-font;
+	font-size: size(body);
+    line-height: size(body) * 1.5;
+	color: color(text);
 
 	p {
 	    margin: 1em 0;
@@ -43,13 +43,13 @@
 	/* sub / sup */
 	sub,
 	sup {
-	    font-size: $body-font-size - rem-calc(2px);
+	    font-size: size(body) - rem-calc(2px);
 	}
 
 	/* tables */
 	table {
 	    empty-cells: show;
-	    border-color: $body-font-color;
+	    border-color: color(text);
 	    border-collapse: collapse;
 	    border-spacing: 0;
 	}
@@ -64,17 +64,17 @@
 	 */
 	h2 {
 		/* name: Kop 1*/
-		font-family: $primary-font;
+		font-family: $base-font;
 	}
 
 	h3 {
 		/* name: Kop 2*/
-		font-family: $primary-font;
+		font-family: $base-font;
 	}
 
 	h4 {
 		/* name: Kop 3*/
-		font-family: $primary-font;
+		font-family: $base-font;
 	}
 }
 
@@ -85,20 +85,20 @@
  */
 .cms_textbigger   {
     /* name: Tekst groter*/
-    font-family: $body-font-family;
-	font-size: $body-font-size + rem-calc(2px);
+    font-family: $base-font;
+	font-size: size(body) + rem-calc(2px);
 }
 
 .cms_textnormal   {
     /* name: Tekst normaal*/
-    font-family: $body-font-family;
-	font-size: $body-font-size;
+    font-family: $base-font;
+	font-size: size(body);
 }
 
 .cms_textsmaller   {
     /* name: Tekst kleiner*/
-    font-family: $body-font-family;
-	font-size: $body-font-size - rem-calc(2px);
+    font-family: $base-font;
+	font-size: size(body) - rem-calc(2px);
 }
 
 /*
@@ -106,13 +106,13 @@
  */
 .cms_defaulttextcolor   {
     /* name: Tekst kleur standaard */
-    color: $body-font-color;
-	font-family: $body-font-family;
+    color: color(text);
+	font-family: $base-font;
 }
 
 /* eigen implementatie: Let op beschrijving*/
 .cms_hoofdkleur   {
     /* name: Tekst hoofdkleur*/
-    color: $primary-color;
-	font-family: $body-font-family;
+    color: color(primary);
+	font-family: $base-font;
 }
