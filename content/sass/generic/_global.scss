@@ -79,13 +79,6 @@ img {
     height: auto;
 }
 
-// Non-fluid images if you specify `width` and/or `height` attributes.
-img[width],
-img[height] {
-    max-width: none;
-}
-
-
 //
 // Browse happy prompt
 //
