@@ -66,6 +66,15 @@ $sizes: (
     )
 );
 
+//
+// Z-index
+//
+$z-index: (
+    base: (
+        header: 100
+    )
+);
+
 
 //
 // Default support for mediaqueries
