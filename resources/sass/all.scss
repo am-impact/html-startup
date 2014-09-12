@@ -1,6 +1,7 @@
 // Compass styles
 @import "compass/css3/box-sizing",
-		"compass/css3/transition";
+		"compass/css3/transition",
+		"compass/css3/columns";
 
 // Sprites
 //@import "icons/*.png";
@@ -26,7 +27,7 @@
 		"components/footer";
 
 // Specific
-@import "specific";
+@import "redactor";
 
 // Print styles
 @import "generic/print";

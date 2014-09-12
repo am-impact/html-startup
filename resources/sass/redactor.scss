@@ -1,9 +1,10 @@
 @import "generic/functions";
 @import "settings";
 @import "generic/mixins";
+@import "compass/css3/columns";
 
-/* Styles */
-.c-entry {
+.c-entry,
+.redactor_editor {
 	font-family: $base-font;
 	font-size: size(body);
     line-height: size(body) * 1.5;
@@ -63,25 +64,22 @@
 	 * Editor style list
 	 */
 	h2 {
-		/* name: Kop 1*/
 		font-family: $base-font;
 	}
 
 	h3 {
-		/* name: Kop 2*/
 		font-family: $base-font;
 	}
 
 	h4 {
-		/* name: Kop 3*/
 		font-family: $base-font;
 	}
 }
 
 
 
-/*
- * text sizes
+/**
+ * Text sizes
  */
 .cms_textbigger   {
     /* name: Tekst groter*/
@@ -101,18 +99,30 @@
 	font-size: size(body) - rem-calc(2px);
 }
 
-/*
- * text colors
+/**
+ * Text colors
  */
 .cms_defaulttextcolor   {
-    /* name: Tekst kleur standaard */
     color: color(text);
 	font-family: $base-font;
 }
 
-/* eigen implementatie: Let op beschrijving*/
 .cms_hoofdkleur   {
-    /* name: Tekst hoofdkleur*/
     color: color(primary);
 	font-family: $base-font;
+}
+
+/**
+ * Columns
+ */
+.cms_2columns {
+	@include columns(2 size(maxColumnWidth, width));
+	@include column-rule(1px, solid, color(ui));
+	@include column-gap( $column-gutter );
+}
+
+.cms_3columns {
+	@include columns(3 size(maxColumnWidth, width));
+	@include column-rule(1px, solid, color(ui));
+	@include column-gap( $column-gutter );
 }
