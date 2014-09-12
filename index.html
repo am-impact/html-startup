@@ -18,7 +18,7 @@
         <meta name="msapplication-TileColor" content="#FFFFFF">
         <meta name="msapplication-TileImage" content="windows8icon.png">
 
-        <link rel="stylesheet" href="content/compiled/all.css">
+        <link rel="stylesheet" href="resources/compiled/all.css">
 
         <!--
             IE8 polyfill: http://foundation.zurb.com/forum/posts/241-foundation-5-and-ie8
@@ -37,8 +37,8 @@
                 cookieurl: 'pagina.html'
             };
         </script>
-        <script src="scripts/head.load.min.js"></script>
-        <script src="scripts/modernizr.min.js"></script>
+        <script src="resources/scripts/head.load.min.js"></script>
+        <script src="resources/scripts/modernizr.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]><p class="browsehappy">Je browser is verouderd en geeft deze website mogelijk niet correct weer. Download <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home" rel="nofollow" target="_blank">de laatste versie van Internet Explorer</a> en ervaar het internet beter, sneller en veiliger!</p><![endif]-->
@@ -49,17 +49,8 @@
             Header
         -->
         <header class="page-header">
-            <a class="logo" href="index.html" title="Homepage Bedrijfsnaam"><img src="content/img/logo.png" alt="Logo Bedrijfsnaam"></a>
+            <a class="logo" href="index.html" title="Homepage Bedrijfsnaam"><img src="resources/img/logo.png" alt="Logo Bedrijfsnaam"></a>
         </header>
-
-        <div class="row">
-            <div class="columns large-2 medium-4 small-6">1</div>
-            <div class="columns large-2 medium-4 small-6">2</div>
-            <div class="columns large-2 medium-4 small-6">3</div>
-            <div class="columns large-2 medium-4 small-6">4</div>
-            <div class="columns large-2 medium-4 small-6">5</div>
-            <div class="columns large-2 medium-4 small-6">6</div>
-        </div>
 
         <!--
             Main
@@ -94,13 +85,13 @@
             IE8 polyfill: http://foundation.zurb.com/forum/posts/241-foundation-5-and-ie8
         -->
         <!--[if lt IE 9]>
-            <script src="scripts/rem.min.js"></script>
+            <script src="resources/scripts/rem.min.js"></script>
         <![endif]-->
         <script>
             head.js(
                 { cookie: '//cdn.am-impact.nl/load.js?js=scripts/cookiemessage/cookiemessage.js' },
-                { functions: 'scripts/functions.js' },
-                { all: 'scripts/all.js' }
+                { functions: 'resources/scripts/functions.js' },
+                { all: 'resources/scripts/all.js' }
             );
         </script>
     </body>

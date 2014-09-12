@@ -2,10 +2,10 @@
 
 # Set this to the root of your project when deployed:
 http_path = "/"
-css_dir = "content/compiled"
-sass_dir = "content/sass"
-images_dir = "content/img"
-javascripts_dir = "scripts"
+css_dir = "resources/compiled"
+sass_dir = "resources/sass"
+images_dir = "resources/img"
+javascripts_dir = "resources/scripts"
 
 # You can select your preferred output style here (can be overridden via the command line):
 output_style = :compressed #:expanded or :nested or :compact or :compressed
