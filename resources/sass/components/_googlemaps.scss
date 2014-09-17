@@ -3,7 +3,6 @@
     font-size: size(body);
     text-align: left;
     color: color(text);
-    background: color(background, load);
 
     a { color: color(text); }
     div[title="Street View afsluiten"] img { cursor: pointer; }
