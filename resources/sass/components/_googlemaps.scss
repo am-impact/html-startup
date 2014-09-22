@@ -8,7 +8,7 @@
     div[title="Street View afsluiten"] img { cursor: pointer; }
     input[type="text"] { width: 210px; }
     input[type=submit] {
-        @extend .button;
+        @extend .button !optional;
         margin: 5px 0 0 0;
     }
 
