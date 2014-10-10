@@ -1,0 +1,49 @@
+<!-- $bedrijfsnaam = Bedrijfsnaam -->
+<!-- $lang = nl -->
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="<!-- $lang -->"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="<!-- $lang -->"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="<!-- $lang -->"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="<!-- $lang -->"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <title>Pagina titel - <!-- $bedrijfsnaam --></title>
+        <meta name="description" content="">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="shortcut icon" href="favicon.ico">
+
+        <link rel="stylesheet" href="resources/compiled/all.css">
+
+        <!--
+            IE8 polyfill: http://foundation.zurb.com/forum/posts/241-foundation-5-and-ie8
+        -->
+        <!--[if lt IE 9]>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+            <script src="//s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.5-min.js"></script>
+            <script src="//html5base.googlecode.com/svn-history/r38/trunk/js/selectivizr-1.0.3b.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+        <![endif]-->
+
+        <script>
+            var FW = FW || {};
+            FW.Config = {
+                submap: '',
+                cookieurl: 'pagina.html'
+            };
+        </script>
+        <script src="resources/scripts/head.load.min.js"></script>
+        <script src="resources/scripts/modernizr.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]><p class="browsehappy">Je browser is verouderd en geeft deze website mogelijk niet correct weer. Download <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home" rel="nofollow" target="_blank">de laatste versie van Internet Explorer</a> en ervaar het internet beter, sneller en veiliger!</p><![endif]-->
+
+        <a href="#content" class="visuallyhidden">Naar inhoud</a>
+
+        <header class="page-header">
+            <a class="page-logo" href="index.html" title="Homepage <!-- $bedrijfsnaam -->"><img src="resources/img/logo.png" alt="Logo <!-- $bedrijfsnaam -->"></a>
+        </header>
