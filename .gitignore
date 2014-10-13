@@ -1,3 +1,17 @@
+## Codekit
+config.codekit
+
+## Sourcemaps
+*.map
+
+## Node.js
+node_modules
+
+## Sass
 .sass-cache
+
+## OS X
 .DS_Store
-.map
+
+## Windows
+Thumbs.db
