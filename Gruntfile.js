@@ -82,8 +82,9 @@ module.exports = function(grunt) {
             grunt: {
                 files: ['Gruntfile.js']
             },
-            src: {
-                files: ['<%= project.src %>**/*.kit','<%= project.src %>**/*.scss','<%= project.src %>**/*.js'],
+            default: {
+                //files: ['<%= project.src %>**/*.kit','<%= project.src %>**/*.scss','<%= project.src %>**/*.js'],
+                files: ['<%= project.src %>**/*.scss','<%= project.src %>**/*.js'],
                 tasks: ['default']
             },
             // grunt watch:js
