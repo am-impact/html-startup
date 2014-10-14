@@ -1,0 +1,22 @@
+{
+  "name": "amimpact",
+  "version": "1.0.0",
+  "description": "Uglify js",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "a&m impact",
+  "license": "ISC",
+  "devDependencies": {
+    "bower": "~1.2.6",
+    "grunt": "~0.4.1",
+    "grunt-codekit": "^1.0.0-beta",
+    "grunt-contrib-compass": "^1.0.1",
+    "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-uglify": "~0.6.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-open": "~0.2.0",
+    "matchdep": "~0.1.2"
+  }
+}
