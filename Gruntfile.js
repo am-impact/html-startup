@@ -37,7 +37,7 @@ module.exports = function(grunt) {
         },
 
         /**
-         * Contact
+         * Concat
          */
         concat: {
             options: {
