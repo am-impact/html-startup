@@ -2,6 +2,28 @@ var FW = FW || {};
 
 
 /**
+ * Load small or large image
+ */
+(function() {
+    var largeImageLoaded = false,
+        $images = $('img[data-imageLarge]');
+
+    function loadImages() {
+        if( Modernizr.mq('(max-width: 767px)') && !largeImageLoaded ) {
+            $images.each(function() {$(this).attr('src', $(this).data('imageSmall'))});
+        }
+        else {
+            $images.each(function() {$(this).attr('src', $(this).data('imageLarge'))});
+            largeImageLoaded = true;
+        }
+    }
+
+    $(window).on('resize', loadImages);
+    loadImages();
+})();
+
+
+/**
  * Retina images
  */
 (function() {
