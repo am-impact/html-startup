@@ -6,14 +6,14 @@ var FW = FW || {};
  */
 (function() {
     var largeImageLoaded = false,
-        $images = $('img[data-imageLarge]');
+        $images = $('img[data-imagelarge]');
 
     function loadImages() {
         if( Modernizr.mq('(max-width: 767px)') && !largeImageLoaded ) {
-            $images.each(function() {$(this).attr('src', $(this).data('imageSmall'))});
+            $images.each(function() {$(this).attr('src', $(this).data('imagesmall'))});
         }
         else {
-            $images.each(function() {$(this).attr('src', $(this).data('imageLarge'))});
+            $images.each(function() {$(this).attr('src', $(this).data('imagelarge'))});
             largeImageLoaded = true;
         }
     }
