@@ -6,13 +6,15 @@ var FW = FW || {};
  */
 (function() {
     var largeImageLoaded = false,
+        smallImageLoaded = false,
         $images = $('img[data-imagelarge]');
 
     function loadImages() {
-        if( Modernizr.mq('(max-width: 767px)') && !largeImageLoaded ) {
+        if( Modernizr.mq('(max-width: 767px)') && !largeImageLoaded && !smallImageLoaded ) {
             $images.each(function() {$(this).attr('src', $(this).data('imagesmall'))});
+            smallImageLoaded = true;
         }
-        else {
+        else if( Modernizr.mq('(min-width: 768px)') && !largeImageLoaded ) {
             $images.each(function() {$(this).attr('src', $(this).data('imagelarge'))});
             largeImageLoaded = true;
         }
