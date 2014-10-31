@@ -116,13 +116,13 @@
  * Columns
  */
 .cms_2columns {
-	@include columns(2 size(maxColumnWidth, width));
+	@include columns(2 size(maxColumnWidth));
 	@include column-rule(1px, solid, color(ui));
 	@include column-gap( $column-gutter );
 }
 
 .cms_3columns {
-	@include columns(3 size(maxColumnWidth, width));
+	@include columns(3 size(maxColumnWidth));
 	@include column-rule(1px, solid, color(ui));
 	@include column-gap( $column-gutter );
 }
