@@ -68,7 +68,7 @@ module.exports = function(grunt) {
             dist: {
                 files: [
                     {
-                        src: ['<%= project.jsSrc %>functions.js','<%= project.jsSrc %>all.js'],
+                        src: ['<%= project.jsSrc %>functions.js','<%= project.jsSrc %>fitvids.js','<%= project.jsSrc %>all.js'],
                         dest: '<%= project.jsDest %>all.min.js'
                     }
                 ]
