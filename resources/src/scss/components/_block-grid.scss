@@ -49,7 +49,7 @@
 }
 
 @include exports("block-grid") {
-    @if $include-html-grid-classes {
+    @if $use-block-grid {
 
         [class*="block-grid-"] { @include block-grid; }
 

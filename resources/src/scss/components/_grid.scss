@@ -175,7 +175,7 @@
 }
 
 @include exports("grid") {
-  @if $include-html-grid-classes {
+  @if $use-grid {
     .row {
       @include grid-row;
 

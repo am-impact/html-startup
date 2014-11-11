@@ -2,6 +2,15 @@ $rem-base: 16px;
 
 
 //
+// Use css classes
+//
+$use-visibility:    false;
+$use-grid:          true;
+$use-block-grid:    false;
+
+
+
+//
 // Sprites
 //
 $icons: 	sprite-map("icons/*.png", $layout: smart);
@@ -72,18 +81,15 @@ $fix-mqs: false !default;
 //
 // Foundation variables
 //
-$include-html-classes: true;
 $opposite-direction: right;
 $default-float: left;
 
 // Grid variables
-$include-html-grid-classes: $include-html-classes !default;
 $row-width: rem-calc(1000) !default;
 $column-gutter: rem-calc(30) !default;
 $total-columns: 12 !default;
 
 // Block Grid Variables
-$include-html-grid-classes: $include-html-classes !default;
 $block-grid-elements: 12 !default;
 $block-grid-default-spacing: rem-calc(20) !default;
 $block-grid-media-queries: true !default;

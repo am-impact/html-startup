@@ -1,7 +1,7 @@
 //
 // Foundation Visibility Classes
 //
-$include-html-visibility-classes: $include-html-classes !default;
+$include-html-visibility-classes: $use-visibility !default;
 
 @if $include-html-visibility-classes != false {
 
