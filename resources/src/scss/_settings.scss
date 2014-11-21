@@ -58,7 +58,7 @@ $sizes: (
         mega: rem-calc(72px),
         kilo: rem-calc(48px),
         radius: 5px,
-        maxColumnWidth: rem-calc(150px)
+        maxColumnWidth: 150px
     )
 );
 
@@ -85,13 +85,13 @@ $opposite-direction: right;
 $default-float: left;
 
 // Grid variables
-$row-width: rem-calc(1000) !default;
-$column-gutter: rem-calc(30) !default;
+$row-width: 1000px !default;
+$column-gutter: 30px !default;
 $total-columns: 12 !default;
 
 // Block Grid Variables
 $block-grid-elements: 12 !default;
-$block-grid-default-spacing: rem-calc(20) !default;
+$block-grid-default-spacing: 20px !default;
 $block-grid-media-queries: true !default;
 
 
