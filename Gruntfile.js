@@ -58,6 +58,19 @@ module.exports = function(grunt) {
         },
 
         /**
+         * Notify
+         */
+        notify_hooks: {
+            options: {
+                enabled: true,
+                max_jshint_notifications: 5,
+                title: '<%= pkg.name %>',
+                success: false,
+                duration: 3
+            }
+        },
+
+        /**
          * Uglify
          */
         uglify: {
@@ -100,7 +113,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-notify');
 
-    grunt.registerTask('default', ['codekit','compass','uglify','concat']);
+    grunt.task.run('notify_hooks');
+
+    //grunt.registerTask('default', ['codekit','compass','uglify','concat']);
+    grunt.registerTask('default', ['compass','uglify','concat']);
     grunt.registerTask('js', ['uglify','concat']);
 };
