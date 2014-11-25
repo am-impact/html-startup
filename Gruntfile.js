@@ -58,6 +58,13 @@ module.exports = function(grunt) {
         },
 
         /**
+         * Jshint
+         */
+        jshint: {
+            src: ['Gruntfile.js', '<%= project.jsSrc %>*.js']
+        },
+
+        /**
          * Notify
          */
         notify_hooks: {
@@ -111,13 +118,14 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-codekit');
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-notify');
 
     grunt.task.run('notify_hooks');
 
-    //grunt.registerTask('default', ['codekit','compass','uglify','concat']);
-    grunt.registerTask('default', ['compass','uglify','concat']);
-    grunt.registerTask('js', ['uglify','concat']);
+    //grunt.registerTask('default', ['codekit','compass','uglify','concat','jshint']);
+    grunt.registerTask('default', ['compass','uglify','concat','jshint']);
+    grunt.registerTask('js', ['uglify','concat','jshint']);
 };
