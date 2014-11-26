@@ -61,6 +61,22 @@ module.exports = function(grunt) {
         },
 
         /**
+         * Express
+         */
+        express: {
+            all: {
+                options: {
+                    port: 9000,
+                    hostname: "0.0.0.0",
+                    bases: [__dirname]  // Replace with the directory you want the files served from
+                                        // Make sure you don't use `.` or `..` in the path as Express
+                                        // is likely to return 403 Forbidden responses if you do
+                                        // http://stackoverflow.com/questions/14594121/express-res-sendfile-throwing-forbidden-error
+                }
+            }
+        },
+
+        /**
          * Jshint
          */
         jshint: {
@@ -77,6 +93,16 @@ module.exports = function(grunt) {
                 title: '<%= pkg.name %>',
                 success: false,
                 duration: 3
+            }
+        },
+
+        /**
+         * Open in browser
+         */
+        open: {
+            all: {
+                // Gets the port from the connect configuration
+                path: 'http://localhost:<%= express.all.options.port %>'
             }
         },
 
@@ -139,9 +165,12 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-express');
     grunt.loadNpmTasks('grunt-notify');
+    grunt.loadNpmTasks('grunt-open');
 
     grunt.task.run('notify_hooks');
 
     grunt.registerTask('default', ['codekit','compass','uglify','concat','jshint']);
+    grunt.registerTask('server', ['express','open','watch']);
 };
