@@ -109,15 +109,26 @@ module.exports = function(grunt) {
             grunt: {
                 files: ['Gruntfile.js']
             },
-            default: {
-                //files: ['<%= project.src %>**/*.kit','<%= project.src %>**/*.scss','<%= project.src %>**/*.js'],
-                files: ['<%= project.src %>**/*.scss','<%= project.src %>**/*.js'],
-                tasks: ['default']
-            },
-            // grunt watch:js
-            js: {
+            javascript: {
                 files: ['<%= project.src %>**/*.js'],
-                tasks: ['js']
+                tasks: ['uglify','concat','jshint'],
+                options: {
+                    livereload: true
+                }
+            },
+            codekit: {
+                files: ['<%= project.src %>**/*.kit'],
+                tasks: ['codekit'],
+                options: {
+                    livereload: true
+                }
+            },
+            compass: {
+                files: ['<%= project.src %>**/*.scss'],
+                tasks: ['compass'],
+                options: {
+                    livereload: true
+                }
             }
         }
     });
@@ -132,7 +143,5 @@ module.exports = function(grunt) {
 
     grunt.task.run('notify_hooks');
 
-    //grunt.registerTask('default', ['codekit','compass','uglify','concat','jshint']);
-    grunt.registerTask('default', ['compass','uglify','concat','jshint']);
-    grunt.registerTask('js', ['uglify','concat','jshint']);
+    grunt.registerTask('default', ['codekit','compass','uglify','concat','jshint']);
 };
