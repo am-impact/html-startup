@@ -135,7 +135,7 @@ module.exports = function(grunt) {
             grunt: {
                 files: ['Gruntfile.js']
             },
-            javascript: {
+            js: {
                 files: ['<%= project.src %>**/*.js'],
                 tasks: ['uglify','concat','jshint'],
                 options: {
