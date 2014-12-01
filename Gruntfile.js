@@ -78,6 +78,7 @@ module.exports = function(grunt) {
 
         /**
          * Jshint
+         * Options list: https://github.com/jshint/jshint/blob/master/examples/.jshintrc
          */
         jshint: {
             src: ['Gruntfile.js', '<%= project.jsSrc %>*.js'],
