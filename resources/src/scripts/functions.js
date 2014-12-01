@@ -11,11 +11,11 @@ var FW = FW || {};
 
     function loadImages() {
         if( Modernizr.mq('(max-width: 767px)') && !largeImageLoaded && !smallImageLoaded ) {
-            $images.each(function() {$(this).attr('src', $(this).data('imagesmall'))});
+            $images.each(function() {$(this).attr('src', $(this).data('imagesmall'));});
             smallImageLoaded = true;
         }
         else if( Modernizr.mq('(min-width: 768px)') && !largeImageLoaded ) {
-            $images.each(function() {$(this).attr('src', $(this).data('imagelarge'))});
+            $images.each(function() {$(this).attr('src', $(this).data('imagelarge'));});
             largeImageLoaded = true;
         }
     }
