@@ -80,7 +80,10 @@ module.exports = function(grunt) {
          * Jshint
          */
         jshint: {
-            src: ['Gruntfile.js', '<%= project.jsSrc %>*.js']
+            src: ['Gruntfile.js', '<%= project.jsSrc %>*.js'],
+            options: {
+                'expr': true
+            }
         },
 
         /**
