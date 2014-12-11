@@ -13,8 +13,8 @@ $use-block-grid:    false;
 //
 // Sprites
 //
-$icons: 	sprite-map("icons/*.png", $layout: smart);
-$icons2x: 	sprite-map("icons2x/*.png", $layout: smart);
+$sprite: 	sprite-map("sprite/*.png", $layout: smart);
+$sprite2x: 	sprite-map("sprite2x/*.png", $layout: smart);
 
 
 //

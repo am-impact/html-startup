@@ -15,16 +15,16 @@
 //
 // Retina sprites
 //
-@mixin use-sprite($sprite, $retina: false, $hover: false) {
+@mixin use-sprite($item, $retina: false, $hover: false) {
     background: {
-        image: sprite-url($icons);
-        position: sprite-position($icons, $sprite);
+        image: sprite-url($sprite);
+        position: sprite-position($sprite, $item);
         repeat: no-repeat;
     }
 
     @if ( $hover ) {
         &:hover {
-            background-position: sprite-position($icons, #{$sprite}_hover);
+            background-position: sprite-position($sprite, #{$item}_hover);
         }
     }
 
@@ -32,17 +32,17 @@
         @media  ( -webkit-min-device-pixel-ratio: 2 ),
                 ( -o-min-device-pixel-ratio: 3/2 ),
                 ( min-device-pixel-ratio: 2 ) {
-            height: image-height(sprite-file($icons2x, $sprite)) / 2;
-            width: image-width(sprite-file($icons2x, $sprite)) / 2;
+            height: image-height(sprite-file($sprite2x, $item)) / 2;
+            width: image-width(sprite-file($sprite2x, $item)) / 2;
             background: {
-                image: sprite-url($icons2x);
-                position: round(nth(sprite-position($icons2x, $sprite), 1) / 2) round(nth(sprite-position($icons2x, $sprite), 2) / 2);
-                size: (image-width(sprite-path($icons2x)) / 2) (image-height(sprite-path($icons2x)) / 2);
+                image: sprite-url($sprite2x);
+                position: round(nth(sprite-position($sprite2x, $item), 1) / 2) round(nth(sprite-position($sprite2x, $item), 2) / 2);
+                size: (image-width(sprite-path($sprite2x)) / 2) (image-height(sprite-path($sprite2x)) / 2);
             }
 
             @if ( $hover ) {
                 &:hover {
-                    background-position: round(nth(sprite-position($icons2x, $sprite), 1) / 2) round(nth(sprite-position($icons2x, $sprite), 2) / 2);
+                    background-position: round(nth(sprite-position($sprite2x, $item), 1) / 2) round(nth(sprite-position($sprite2x, $item), 2) / 2);
                 }
             }
         }
