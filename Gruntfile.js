@@ -123,6 +123,7 @@ module.exports = function(grunt) {
                     {
                         src: [
                             '<%= project.jsSrc %>functions.js',
+                            '<%= project.jsSrc %>fw.table.js',
                             '<%= project.jsSrc %>fitvids.js',
                             '<%= project.jsSrc %>all.js'
                         ],

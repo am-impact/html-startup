@@ -58,6 +58,14 @@ ol, ul {
     list-style: none;
 }
 
+//
+// Default spacing cells
+//
+th,
+td {
+    padding: 0 0 0 2px;
+}
+
 
 //
 // Remove the gap between images, videos, audio and canvas and the bottom of
