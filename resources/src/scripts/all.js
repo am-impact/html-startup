@@ -19,6 +19,12 @@ try	{ document.execCommand("BackgroundImageCache", false, true); } catch(e) { }
 
 
 /**
+ * Fit video's op c-entry zetten
+ */
+$('.c-entry').fitVids();
+
+
+/**
  * Cookiemelding
  */
 head.ready('cookie', function() {
