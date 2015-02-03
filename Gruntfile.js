@@ -115,7 +115,6 @@ module.exports = function(grunt) {
          */
         uglify: {
             options: {
-                banner: '/*! Last build: <%= grunt.template.today("dd-mm-yyyy hh:mm:ss") %> */\n',
                 sourceMap: true
             },
             dist: {
