@@ -51,10 +51,6 @@ module.exports = function(grunt) {
                             '<%= project.jsSrc %>libs/modernizr.min.js'
                         ],
                         dest: '<%= project.jsDest %>libs/header.min.js'
-                    },
-                    {
-                        src: ['<%= project.jsSrc %>libs/rem.min.js'],
-                        dest: '<%= project.jsDest %>libs/rem.min.js'
                     }
                 ]
             },
