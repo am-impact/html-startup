@@ -1,0 +1,16 @@
+.address {
+    dl {
+        margin: 0;
+    }
+
+    dt {
+        @include inline;
+        width: 15%;
+    }
+
+    dd {
+        @include inline;
+        width: 83%;
+        margin: 0;
+    }
+}
