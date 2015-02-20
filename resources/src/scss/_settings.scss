@@ -74,13 +74,6 @@ $z-index: (
     )
 );
 
-
-//
-// Default support for mediaqueries
-//
-$fix-mqs: false !default;
-
-
 //
 // Foundation variables
 //
@@ -97,6 +90,10 @@ $block-grid-elements: 12 !default;
 $block-grid-default-spacing: 20px !default;
 $block-grid-media-queries: true !default;
 
+//
+// Overig
+//
+$padding: $column-gutter / 2;
 
 // Media query ranges
 $xsmall-range: (0em, 30em); 		// 0, 480px
