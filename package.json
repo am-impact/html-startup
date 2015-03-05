@@ -11,8 +11,8 @@
   "devDependencies": {
     "bower": "~1.2.6",
     "grunt": "~0.4.1",
+    "grunt-autoprefixer": "^2.2.0",
     "grunt-codekit": "^1.0.0-beta",
-    "grunt-contrib-compass": "^1.0.1",
     "grunt-contrib-concat": "^0.5.0",
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-uglify": "~0.6.0",
@@ -20,6 +20,8 @@
     "grunt-express": "^1.4.1",
     "grunt-notify": "^0.4.1",
     "grunt-open": "^0.2.3",
+    "grunt-sass": "^0.18.0",
+    "grunt-spritesmith": "^3.9.0",
     "matchdep": "~0.1.2"
   }
 }

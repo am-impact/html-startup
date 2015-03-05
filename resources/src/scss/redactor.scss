@@ -1,7 +1,6 @@
 @import "generic/functions";
 @import "settings";
 @import "generic/mixins";
-@import "compass/css3/columns";
 
 .c-entry {
     a:visited { color: lighten(color(text),5%); }
@@ -128,13 +127,15 @@
  * Columns
  */
 .cms_2columns {
-	@include columns(2 size(maxColumnWidth));
-	@include column-rule(1px, solid, color(ui));
-	@include column-gap( $column-gutter );
+	column-count: 2;
+    column-width: maxColumnWidth;
+    column-gap: $column-gutter;
+    column-rule: 1px solid color(ui);
 }
 
 .cms_3columns {
-	@include columns(3 size(maxColumnWidth));
-	@include column-rule(1px, solid, color(ui));
-	@include column-gap( $column-gutter );
+	column-count: 3;
+    column-width: maxColumnWidth;
+    column-gap: $column-gutter;
+    column-rule: 1px solid color(ui);
 }

@@ -1,16 +1,12 @@
 // Charset
 @charset "UTF-8";
 
-// Compass styles
-@import "compass/css3/box-sizing",
-		"compass/css3/transition",
-		"compass/css3/columns";
-
 // Generic styles
 @import "generic/functions",
 		"settings",
 		"generic/mixins",
 		"generic/normalize",
+		"generic/sprite",
 		"generic/helpers",
 		"generic/global";
 

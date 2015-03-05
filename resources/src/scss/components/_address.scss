@@ -4,12 +4,12 @@
     }
 
     dt {
-        @include inline;
+        display: inline-block;
         width: 15%;
     }
 
     dd {
-        @include inline;
+        display: inline-block;
         width: 83%;
         margin: 0;
     }
