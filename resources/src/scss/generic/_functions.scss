@@ -5,7 +5,7 @@
     @return map-get(map-get($colors, $palette), $type);
 }
 
-@function size($type, $palette: 'font') {
+@function size($type, $palette: 'base') {
     @return map-get(map-get($sizes, $palette), $type);
 }
 
