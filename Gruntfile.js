@@ -135,7 +135,7 @@ module.exports = function(grunt) {
 		 * Sprite
 		 */
 		sprite:{
-		    all: {
+		    normal: {
 		        src: '<%= project.imgSrc %>sprite/*.png',
 		        dest: '<%= project.imgDest %>sprite.png',
 		        destCss: '<%= project.cssSrc %>generic/_sprite.scss',
@@ -143,6 +143,15 @@ module.exports = function(grunt) {
 		        cssVarMap: function (sprite) {
 		          	sprite.name = 'sprite_' + sprite.name;
 		        }
+		    },
+		    retina: {
+		    	src: '<%= project.imgSrc %>sprite2x/*.png',
+		    	dest: '<%= project.imgDest %>sprite2x.png',
+		    	destCss: '<%= project.cssSrc %>generic/_sprite2x.scss',
+		    	imgPath: '../img/sprite2x.png',
+		    	cssVarMap: function (sprite) {
+		    	  	sprite.name = 'sprite2x_' + sprite.name;
+		    	}
 		    }
 		},
 
@@ -191,7 +200,7 @@ module.exports = function(grunt) {
 			},
 			sass: {
 				files: ['<%= project.cssSrc %>**/*.scss'],
-				tasks: ['sprite:all','sass','autoprefixer'],
+				tasks: ['sprite:normal','sprite:retina','sass','autoprefixer'],
 				options: {
 					livereload: true
 				}
@@ -213,6 +222,6 @@ module.exports = function(grunt) {
 
 	grunt.task.run('notify_hooks');
 
-	grunt.registerTask('default', ['codekit','sass','uglify','concat','jshint','autoprefixer','sprite:all']);
+	grunt.registerTask('default', ['codekit','sass','uglify','concat','jshint','autoprefixer','sprite:normal','sprite:retina']);
 	grunt.registerTask('server', ['express','open','watch']);
 };
