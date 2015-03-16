@@ -1,9 +1,8 @@
 var FW = FW || {};
 
-FW.Table = {
-    makeTableResponsive: function( $table ) {
-        var self = this,
-            tableHeadItems = [],
+FW.Table = ( function( window, undefined ) {
+    function makeTableResponsive( $table ) {
+        var tableHeadItems = [],
             $thead = $table.find('thead'),
             $tbody = $table.find('tbody');
 
@@ -18,17 +17,20 @@ FW.Table = {
         $tbody.find('td').each(function() {
             $(this).attr('data-title', tableHeadItems[$(this).index()] );
         });
-    },
+    }
 
-    formatWysiwygTables: function() {
-        var self = this,
-            $tables = $('.c-entry table');
+    function init() {
+        var $tables = $('.c-entry table');
 
         $tables.each(function() {
             $(this).addClass('table');
-            self.makeTableResponsive( $(this) );
+            makeTableResponsive( $(this) );
         });
     }
-};
 
-FW.Table.formatWysiwygTables();
+    init();
+
+    return {
+        //functie: functie
+    };
+})( window );
