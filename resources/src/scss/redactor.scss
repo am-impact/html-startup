@@ -32,6 +32,8 @@
 	}
 
 	img {
+        max-width: 100%;
+        height: auto;
 	    border: none;
 	}
 
@@ -65,10 +67,12 @@
 
 	/* tables */
 	table {
+        table-layout: fixed;
 	    empty-cells: show;
 	    border-color: color(text);
 	    border-collapse: collapse;
 	    border-spacing: 0;
+        width: 100%;
 	}
 
 	/*
