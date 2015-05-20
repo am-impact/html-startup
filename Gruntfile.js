@@ -5,33 +5,61 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 
 		/**
-		 * Set project info
+		 * Set paths
 		 */
-		project: {
-			src: 'resources/src/',
-			cssSrc: '<%= project.src %>scss/',
-			cssDest: 'resources/css/',
-			imgSrc: '<%= project.src %>img/',
-			imgDest: 'resources/img/',
-			jsSrc: '<%= project.src %>scripts/',
-			jsDest: 'resources/scripts/',
-			kitSrc: '<%= project.src %>kit/',
+		path: {
+			resources: 'resources/',
+			cssSrc: '<%= path.resources %>src/scss/',
+			cssDest: '<%= path.resources %>css/',
+			spriteSrc: '<%= path.resources %>src/img/',
+			spriteDest: '<%= path.resources %>sprites/',
+			jsSrc: '<%= path.resources %>src/scripts/',
+			jsDest: '<%= path.resources %>scripts/',
+			kitSrc: '<%= path.src %>kit/',
 			kitDest: ''
+		},
+
+		/**
+		 * Project files
+		 */
+		files: {
+			autoprefixer: {
+				'<%= path.cssDest %>all.css': '<%= path.cssDest %>all.css',
+				'<%= path.cssDest %>redactor.css': '<%= path.cssDest %>redactor.css'
+			},
+			codekit: {
+				src : '<%= path.kitSrc %>*.kit',
+				dest : '<%= path.kitDest %>'
+			},
+			sass: {
+				'<%= path.cssDest %>all.css': '<%= path.cssSrc %>all.scss',
+				'<%= path.cssDest %>redactor.css': '<%= path.cssSrc %>redactor.scss'
+			},
+			uglify: [
+				'<%= path.jsSrc %>functions.js',
+				'<%= path.jsSrc %>fw.table.js',
+				'<%= path.jsSrc %>fitvids.js',
+				'<%= path.jsSrc %>all.js'
+			]
 		},
 
 		/**
 		 * Autoprefixer
 		 */
 		autoprefixer: {
-			options: {
-				browsers: ['last 2 versions', 'ie 8', 'ie 9'],
-				map: true
+			dev: {
+				options: {
+					browsers: ['last 2 versions', 'ie 8', 'ie 9'],
+					map: true
+				},
+				files: '<%= files.autoprefixer %>'
 			},
-			dist: {
-				files: {
-					'<%= project.cssDest %>all.css': '<%= project.cssDest %>all.css',
-					'<%= project.cssDest %>redactor.css': '<%= project.cssDest %>redactor.css'
-				}
+			prod: {
+				options: {
+					browsers: ['last 2 versions', 'ie 8', 'ie 9'],
+					map: false
+				},
+				files: '<%= files.autoprefixer %>'
 			}
 		},
 
@@ -39,10 +67,7 @@ module.exports = function(grunt) {
 		 * Codekit
 		 */
 		codekit: {
-			globbed_example_config : {
-				src : '<%= project.kitSrc %>*.kit',
-				dest : '<%= project.kitDest %>'
-			}
+			globbed_example_config : '<%= files.codekit %>'
 		},
 
 		/**
@@ -52,17 +77,17 @@ module.exports = function(grunt) {
 			options: {
 				separator: ';',
 			},
-			dist: {
+			prod: {
 				files: [
 					{
 						src: [
-							'<%= project.jsSrc %>libs/head.load.min.js',
-							'<%= project.jsSrc %>libs/modernizr.min.js'
+							'<%= path.jsSrc %>libs/head.load.min.js',
+							'<%= path.jsSrc %>libs/modernizr.min.js'
 						],
-						dest: '<%= project.jsDest %>libs/header.min.js'
+						dest: '<%= path.jsDest %>libs/header.min.js'
 					}
 				]
-			},
+			}
 		},
 
 		/**
@@ -86,7 +111,7 @@ module.exports = function(grunt) {
 		 * Options list: https://github.com/jshint/jshint/blob/master/examples/.jshintrc
 		 */
 		jshint: {
-			src: ['Gruntfile.js', '<%= project.jsSrc %>*.js'],
+			src: ['Gruntfile.js', '<%= path.jsSrc %>*.js'],
 			options: {
 				'expr': true
 			}
@@ -119,15 +144,19 @@ module.exports = function(grunt) {
 		 * Sass
 		 */
 		sass: {
-			options: {
-				sourceMap: true,
-				outputStyle: 'compressed'
+			dev: {
+				options: {
+					sourceMap: true,
+					outputStyle: 'expanded'
+				},
+				files: '<%= files.sass %>'
 			},
-			dist: {
-				files: {
-					'<%= project.cssDest %>all.css': '<%= project.cssSrc %>all.scss',
-					'<%= project.cssDest %>redactor.css': '<%= project.cssSrc %>redactor.scss'
-				}
+			prod: {
+				options: {
+					sourceMap: false,
+					outputStyle: 'compressed'
+				},
+				files: '<%= files.sass %>'
 			}
 		},
 
@@ -136,19 +165,19 @@ module.exports = function(grunt) {
 		 */
 		sprite:{
 		    normal: {
-		        src: '<%= project.imgSrc %>sprite/*.png',
-		        dest: '<%= project.imgDest %>sprite.png',
-		        destCss: '<%= project.cssSrc %>generic/_sprite.scss',
-		        imgPath: '../img/sprite.png',
+		        src: '<%= path.spriteSrc %>sprite/*.png',
+		        dest: '<%= path.spriteDest %>sprite.png',
+		        destCss: '<%= path.cssSrc %>generic/_sprite.scss',
+		        imgPath: '../sprites/sprite.png',
 		        cssVarMap: function (sprite) {
 		          	sprite.name = 'sprite_' + sprite.name;
 		        }
 		    },
 		    retina: {
-		    	src: '<%= project.imgSrc %>sprite2x/*.png',
-		    	dest: '<%= project.imgDest %>sprite2x.png',
-		    	destCss: '<%= project.cssSrc %>generic/_sprite2x.scss',
-		    	imgPath: '../img/sprite2x.png',
+		    	src: '<%= path.spriteSrc %>sprite2x/*.png',
+		    	dest: '<%= path.spriteDest %>sprite2x.png',
+		    	destCss: '<%= path.cssSrc %>generic/_sprite2x.scss',
+		    	imgPath: '../sprites/sprite2x.png',
 		    	cssVarMap: function (sprite) {
 		    	  	sprite.name = 'sprite2x_' + sprite.name;
 		    	}
@@ -159,19 +188,27 @@ module.exports = function(grunt) {
 		 * Uglify
 		 */
 		uglify: {
-			options: {
-				sourceMap: true
-			},
-			dist: {
+			dev: {
+				options: {
+					sourceMap: true,
+					mangle: false
+				},
 				files: [
 					{
-						src: [
-							'<%= project.jsSrc %>functions.js',
-							'<%= project.jsSrc %>fw.table.js',
-							'<%= project.jsSrc %>fitvids.js',
-							'<%= project.jsSrc %>all.js'
-						],
-						dest: '<%= project.jsDest %>all.min.js'
+						src: '<%= files.uglify %>',
+						dest: '<%= path.jsDest %>all.min.js'
+					}
+				]
+			},
+			prod: {
+				options: {
+					sourceMap: false,
+					mangle: false
+				},
+				files: [
+					{
+						src: '<%= files.uglify %>',
+						dest: '<%= path.jsDest %>all.min.js'
 					}
 				]
 			}
@@ -184,23 +221,23 @@ module.exports = function(grunt) {
 			grunt: {
 				files: ['Gruntfile.js']
 			},
-			js: {
-				files: ['<%= project.src %>**/*.js'],
-				tasks: ['uglify','concat','jshint'],
-				options: {
-					livereload: true
-				}
-			},
 			codekit: {
-				files: ['<%= project.src %>**/*.kit'],
+				files: ['<%= path.kitSrc %>**/*.kit'],
 				tasks: ['codekit'],
 				options: {
 					livereload: true
 				}
 			},
+			js: {
+				files: ['<%= path.jsSrc %>**/*.js'],
+				tasks: ['uglify:dev','concat','jshint'],
+				options: {
+					livereload: true
+				}
+			},
 			sass: {
-				files: ['<%= project.cssSrc %>**/*.scss'],
-				tasks: ['sprite:normal','sprite:retina','sass','autoprefixer'],
+				files: ['<%= path.cssSrc %>**/*.scss'],
+				tasks: ['sprite:normal','sprite:retina','sass:dev','autoprefixer:dev'],
 				options: {
 					livereload: true
 				}
@@ -222,6 +259,7 @@ module.exports = function(grunt) {
 
 	grunt.task.run('notify_hooks');
 
-	grunt.registerTask('default', ['codekit','sass','uglify','concat','jshint','autoprefixer','sprite:normal','sprite:retina']);
+	grunt.registerTask('default', ['codekit','sass:dev','uglify:dev','concat','jshint','autoprefixer:dev','sprite:normal','sprite:retina']);
+	grunt.registerTask('production', ['codekit','sass:prod','uglify:prod','concat','jshint','autoprefixer:prod','sprite:normal','sprite:retina']);
 	grunt.registerTask('server', ['express','open','watch']);
 };
