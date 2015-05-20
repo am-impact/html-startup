@@ -15,7 +15,7 @@ module.exports = function(grunt) {
 			spriteDest: '<%= path.resources %>sprites/',
 			jsSrc: '<%= path.resources %>src/scripts/',
 			jsDest: '<%= path.resources %>scripts/',
-			kitSrc: '<%= path.src %>kit/',
+			kitSrc: '<%= path.resources %>src/kit/',
 			kitDest: ''
 		},
 
